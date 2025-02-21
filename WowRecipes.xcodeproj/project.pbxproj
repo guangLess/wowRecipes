@@ -11,9 +11,13 @@
 		50698EFA2D68399800AC2FC9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50698EF92D68399800AC2FC9 /* ContentView.swift */; };
 		50698EFC2D68399A00AC2FC9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 50698EFB2D68399A00AC2FC9 /* Assets.xcassets */; };
 		50698EFF2D68399A00AC2FC9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 50698EFE2D68399A00AC2FC9 /* Preview Assets.xcassets */; };
-		50698F092D68399A00AC2FC9 /* WowRecipesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50698F082D68399A00AC2FC9 /* WowRecipesTests.swift */; };
+		50698F092D68399A00AC2FC9 /* RecipeModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50698F082D68399A00AC2FC9 /* RecipeModelTests.swift */; };
 		50698F132D68399A00AC2FC9 /* WowRecipesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50698F122D68399A00AC2FC9 /* WowRecipesUITests.swift */; };
 		50698F152D68399A00AC2FC9 /* WowRecipesUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50698F142D68399A00AC2FC9 /* WowRecipesUITestsLaunchTests.swift */; };
+		50698F222D68F29B00AC2FC9 /* RecipeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50698F212D68F29B00AC2FC9 /* RecipeModel.swift */; };
+		50698F232D68F29B00AC2FC9 /* RecipeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50698F212D68F29B00AC2FC9 /* RecipeModel.swift */; };
+		50698F252D68F36900AC2FC9 /* Recipes.json in Resources */ = {isa = PBXBuildFile; fileRef = 50698F242D68F36800AC2FC9 /* Recipes.json */; };
+		50698F262D68F36900AC2FC9 /* Recipes.json in Resources */ = {isa = PBXBuildFile; fileRef = 50698F242D68F36800AC2FC9 /* Recipes.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,10 +44,12 @@
 		50698EFB2D68399A00AC2FC9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		50698EFE2D68399A00AC2FC9 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		50698F042D68399A00AC2FC9 /* WowRecipesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WowRecipesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		50698F082D68399A00AC2FC9 /* WowRecipesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WowRecipesTests.swift; sourceTree = "<group>"; };
+		50698F082D68399A00AC2FC9 /* RecipeModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeModelTests.swift; sourceTree = "<group>"; };
 		50698F0E2D68399A00AC2FC9 /* WowRecipesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WowRecipesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		50698F122D68399A00AC2FC9 /* WowRecipesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WowRecipesUITests.swift; sourceTree = "<group>"; };
 		50698F142D68399A00AC2FC9 /* WowRecipesUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WowRecipesUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		50698F212D68F29B00AC2FC9 /* RecipeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeModel.swift; sourceTree = "<group>"; };
+		50698F242D68F36800AC2FC9 /* Recipes.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Recipes.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +102,7 @@
 			children = (
 				50698EF72D68399800AC2FC9 /* WowRecipesApp.swift */,
 				50698EF92D68399800AC2FC9 /* ContentView.swift */,
+				50698F212D68F29B00AC2FC9 /* RecipeModel.swift */,
 				50698EFB2D68399A00AC2FC9 /* Assets.xcassets */,
 				50698EFD2D68399A00AC2FC9 /* Preview Content */,
 			);
@@ -113,7 +120,8 @@
 		50698F072D68399A00AC2FC9 /* WowRecipesTests */ = {
 			isa = PBXGroup;
 			children = (
-				50698F082D68399A00AC2FC9 /* WowRecipesTests.swift */,
+				50698F082D68399A00AC2FC9 /* RecipeModelTests.swift */,
+				50698F242D68F36800AC2FC9 /* Recipes.json */,
 			);
 			path = WowRecipesTests;
 			sourceTree = "<group>";
@@ -232,6 +240,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				50698EFF2D68399A00AC2FC9 /* Preview Assets.xcassets in Resources */,
+				50698F252D68F36900AC2FC9 /* Recipes.json in Resources */,
 				50698EFC2D68399A00AC2FC9 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -240,6 +249,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				50698F262D68F36900AC2FC9 /* Recipes.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,6 +269,7 @@
 			files = (
 				50698EFA2D68399800AC2FC9 /* ContentView.swift in Sources */,
 				50698EF82D68399800AC2FC9 /* WowRecipesApp.swift in Sources */,
+				50698F222D68F29B00AC2FC9 /* RecipeModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -266,7 +277,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				50698F092D68399A00AC2FC9 /* WowRecipesTests.swift in Sources */,
+				50698F092D68399A00AC2FC9 /* RecipeModelTests.swift in Sources */,
+				50698F232D68F29B00AC2FC9 /* RecipeModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
