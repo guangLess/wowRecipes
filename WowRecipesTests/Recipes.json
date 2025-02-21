@@ -1,0 +1,31 @@
+{
+    "recipes": [
+        {
+            "cuisine": "British",
+            "name": "Battenberg Cake",
+            "photo_url_large": "https://d3jbb8n5wk0qxi.cloudfront.net/photos/ec1b84b1-2729-4547-99db-5e0b625c0356/large.jpg",
+            "photo_url_small": "https://d3jbb8n5wk0qxi.cloudfront.net/photos/ec1b84b1-2729-4547-99db-5e0b625c0356/small.jpg",
+            "source_url": "https://www.bbcgoodfood.com/recipes/1120657/battenberg-cake",
+            "uuid": "891a474e-91cd-4996-865e-02ac5facafe3",
+            "youtube_url": "https://www.youtube.com/watch?v=aB41Q7kDZQ0"
+        },
+        {
+            "cuisine": "Croatian",
+            "name": "Walnut Roll Gužvara",
+            "photo_url_large": "https://d3jbb8n5wk0qxi.cloudfront.net/photos/8f60cd87-20ab-419b-a425-56b7ad7c8566/large.jpg",
+            "photo_url_small": "https://d3jbb8n5wk0qxi.cloudfront.net/photos/8f60cd87-20ab-419b-a425-56b7ad7c8566/small.jpg",
+            "source_url": "https://www.visit-croatia.co.uk/croatian-cuisine/croatian-recipes/",
+            "uuid": "7d6a2c69-f0ef-459a-abf5-c2e90b6555ff",
+            "youtube_url": "https://www.youtube.com/watch?v=Q_akngSJVrQ"
+        },
+        {
+            "cuisine": "French",
+            "name": "White Chocolate Crème Brûlée",
+            "photo_url_large": "https://d3jbb8n5wk0qxi.cloudfront.net/photos/f4b7b7d7-9671-410e-bf81-39a007ede535/large.jpg",
+            "photo_url_small": "https://d3jbb8n5wk0qxi.cloudfront.net/photos/f4b7b7d7-9671-410e-bf81-39a007ede535/small.jpg",
+            "source_url": "https://www.bbcgoodfood.com/recipes/2540/white-chocolate-crme-brle",
+            "uuid": "ef7d81b7-07ba-4fab-a791-ae10e2817e66",
+            "youtube_url": "https://www.youtube.com/watch?v=LmJ0lsPLHDc"
+        }
+    ]
+}
