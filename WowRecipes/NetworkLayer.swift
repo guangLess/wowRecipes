@@ -28,9 +28,13 @@ struct NetworkLayer {
     func getRecipes(data: Data) throws -> [Recipe] {
         let decoder = JSONDecoder()
         decoder.keyDecodingStrategy = .convertFromSnakeCase
-
-        let result = try decoder.decode(RecipesContainer.self, from: data)
-        let list = result.recipes
-        return list
+        do {
+            let result = try decoder.decode(RecipesContainer.self, from: data)
+            let list = result.recipes
+            return list
+        } catch {
+            throw NetworkError.decodingError(error)
+        }
+        
     }
 }

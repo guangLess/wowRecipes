@@ -12,28 +12,7 @@ struct RecipeView: View {
 
     var body: some View {
         VStack(alignment: .leading) {
-          /*  ZStack(alignment: .bottomLeading) {
-                AsyncImage(url: URL(string: "https://d3jbb8n5wk0qxi.cloudfront.net/photos/dac510db-fa7f-4bf1-af61-706a9c960455/large.jpg")) { image in
-                    image.resizable()
-                        .aspectRatio(contentMode: .fit)
-                } placeholder: {
-                    ProgressView()
-                }
-                Text(recipe.name)
-                    .lineLimit(1)
-                    .minimumScaleFactor(0.3)
-                    .padding([.horizontal, .bottom], 15)
-                    .frame(width: UIScreen.main.bounds.width, height: 300, alignment: .bottomLeading)
-                    .font(.system(.title, design: .serif))
-                    .fontWeight(.bold)
-                    .foregroundColor(.white)
-                    .background(
-                        LinearGradient(gradient: Gradient(colors: [.black.opacity(0), .black.opacity(1)]),
-                                       startPoint: . center, endPoint: .bottom)
-                    )
-            } */
-
-            RecipePreView(imageURL: recipe.photoUrlLarge, name: recipe.name)
+            RecipePreView(imageURL: recipe.photoUrlLarge, name: recipe.name, textNeedsToBeFullWidth: true)
 
             Text(recipe.cuisine + " " + "cuisine")
                 .font(.system(.body, design: .serif))
@@ -57,7 +36,6 @@ struct RecipeView: View {
         .ignoresSafeArea(.all)
     }
 }
-
 
 #Preview {
     RecipeView(recipe: Recipe(uuid: "x",

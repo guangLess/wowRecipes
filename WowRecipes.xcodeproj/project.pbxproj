@@ -31,6 +31,8 @@
 		50698F372D6933FB00AC2FC9 /* RecipeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50698F352D6933FB00AC2FC9 /* RecipeView.swift */; };
 		50698F392D6943C400AC2FC9 /* RecipePreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50698F382D6943C400AC2FC9 /* RecipePreView.swift */; };
 		50698F3A2D6943C400AC2FC9 /* RecipePreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50698F382D6943C400AC2FC9 /* RecipePreView.swift */; };
+		50698F3C2D6E4EC900AC2FC9 /* RecipeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50698F3B2D6E4EC900AC2FC9 /* RecipeViewModel.swift */; };
+		50698F3D2D6E4EC900AC2FC9 /* RecipeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50698F3B2D6E4EC900AC2FC9 /* RecipeViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +72,7 @@
 		50698F322D692E9A00AC2FC9 /* GridsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridsView.swift; sourceTree = "<group>"; };
 		50698F352D6933FB00AC2FC9 /* RecipeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeView.swift; sourceTree = "<group>"; };
 		50698F382D6943C400AC2FC9 /* RecipePreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipePreView.swift; sourceTree = "<group>"; };
+		50698F3B2D6E4EC900AC2FC9 /* RecipeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +123,7 @@
 		50698EF62D68399800AC2FC9 /* WowRecipes */ = {
 			isa = PBXGroup;
 			children = (
+				50698F3B2D6E4EC900AC2FC9 /* RecipeViewModel.swift */,
 				50698EF72D68399800AC2FC9 /* WowRecipesApp.swift */,
 				50698EF92D68399800AC2FC9 /* ContentView.swift */,
 				50698F322D692E9A00AC2FC9 /* GridsView.swift */,
@@ -302,6 +306,7 @@
 				50698F392D6943C400AC2FC9 /* RecipePreView.swift in Sources */,
 				50698F332D692E9A00AC2FC9 /* GridsView.swift in Sources */,
 				50698F362D6933FB00AC2FC9 /* RecipeView.swift in Sources */,
+				50698F3C2D6E4EC900AC2FC9 /* RecipeViewModel.swift in Sources */,
 				50698F2B2D68F66800AC2FC9 /* ApiClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -318,6 +323,7 @@
 				50698F3A2D6943C400AC2FC9 /* RecipePreView.swift in Sources */,
 				50698F342D692E9A00AC2FC9 /* GridsView.swift in Sources */,
 				50698F372D6933FB00AC2FC9 /* RecipeView.swift in Sources */,
+				50698F3D2D6E4EC900AC2FC9 /* RecipeViewModel.swift in Sources */,
 				50698F312D692A3600AC2FC9 /* RecipesDataTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

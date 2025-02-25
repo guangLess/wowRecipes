@@ -9,6 +9,7 @@ import SwiftUI
 
 struct GridsView: View {
     let recipes: [Recipe]
+    let filter: RecipeFilter
 
         let columns = [
             GridItem(.flexible(minimum: 10, maximum: 500), spacing: 4),
@@ -16,17 +17,18 @@ struct GridsView: View {
         ]
 
         var body: some View {
-            // LazyVGrid arranges items in rows using the defined columns.
-            ScrollView{
+            ScrollView {
                 LazyVGrid(columns: columns, spacing: 4) {
                     
                     ForEach(recipes, id: \.id) { item in
                         RecipePreView(imageURL: item.photoUrlSmall,
-                                      name: item.name)
+                                      name: item.name,
+                                      textNeedsToBeFullWidth: false)
                     }
                 }
                 .padding(.horizontal, 4)
             }
+            .id(filter.rawValue)
     }
 }
 
@@ -61,5 +63,5 @@ struct GridsView: View {
                photoUrlSmall:"https://d3jbb8n5wk0qxi.cloudfront.net/photos/dac510db-fa7f-4bf1-af61-706a9c960455/small.jpg",
                sourceUrl: "https://www.bbcgoodfood.com/recipes/canadian-butter-tarts",
                youtubeUrl: "https://www.youtube.com/watch?v=YMmgKCNcqwI")
-    ])
+    ], filter: .cuisine)
 }
