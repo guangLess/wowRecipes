@@ -33,6 +33,7 @@
 		50698F3A2D6943C400AC2FC9 /* RecipePreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50698F382D6943C400AC2FC9 /* RecipePreView.swift */; };
 		50698F3C2D6E4EC900AC2FC9 /* RecipeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50698F3B2D6E4EC900AC2FC9 /* RecipeViewModel.swift */; };
 		50698F3D2D6E4EC900AC2FC9 /* RecipeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50698F3B2D6E4EC900AC2FC9 /* RecipeViewModel.swift */; };
+		50AC95A32D6E87250096F92F /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50AC95A22D6E87250096F92F /* Error.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +74,7 @@
 		50698F352D6933FB00AC2FC9 /* RecipeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeView.swift; sourceTree = "<group>"; };
 		50698F382D6943C400AC2FC9 /* RecipePreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipePreView.swift; sourceTree = "<group>"; };
 		50698F3B2D6E4EC900AC2FC9 /* RecipeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeViewModel.swift; sourceTree = "<group>"; };
+		50AC95A22D6E87250096F92F /* Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 		50698EEB2D68399800AC2FC9 = {
 			isa = PBXGroup;
 			children = (
+				50AC95A22D6E87250096F92F /* Error.swift */,
 				50698EF62D68399800AC2FC9 /* WowRecipes */,
 				50698F072D68399A00AC2FC9 /* WowRecipesTests */,
 				50698F112D68399A00AC2FC9 /* WowRecipesUITests */,
@@ -301,6 +304,7 @@
 				50698F2E2D68F6CB00AC2FC9 /* NetworkLayer.swift in Sources */,
 				50698EFA2D68399800AC2FC9 /* ContentView.swift in Sources */,
 				50698EF82D68399800AC2FC9 /* WowRecipesApp.swift in Sources */,
+				50AC95A32D6E87250096F92F /* Error.swift in Sources */,
 				50698F282D68F54300AC2FC9 /* APIEndpoint.swift in Sources */,
 				50698F222D68F29B00AC2FC9 /* RecipeModel.swift in Sources */,
 				50698F392D6943C400AC2FC9 /* RecipePreView.swift in Sources */,

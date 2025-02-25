@@ -20,10 +20,11 @@ protocol EndPoint {
 
 struct RecipeEndpoint: EndPoint {
     let host = "d3jbb8n5wk0qxi.cloudfront.net"
-    let path = "/recipes-malformed.json" // "/recipes-empty.json"//"/recipes.json"
+    let path = "/recipes.json"
+    
+    /// only for demo propose
+    #if DEBUG
+    let malFormedPath = "/recipes-malformed.json"
+    let emptyPath = "/recipes-empty.json"
+    #endif
 }
-
-
-/**
- https://d3jbb8n5wk0qxi.cloudfront.net/recipes-empty.json
- */
