@@ -7,51 +7,51 @@
 
 import SwiftUI
 
-struct RecipeView: View {
-    @Environment(\.dismiss) private var dismiss
+struct RecipeDetailView: View {
     let recipe: Recipe
+    @Environment(\.dismiss) var dismiss
 
     var body: some View {
         VStack(alignment: .leading) {
-            RecipePreView(imageURL: recipe.photoUrlLarge, name: recipe.name, textNeedsToBeFullWidth: true)
+            RecipeImageView(imageURL: recipe.photoUrlLarge, name: recipe.name, textNeedsToBeFullWidth: true)
                 .overlay(
-                    Button(action: { dismiss() }) {
+                    Button(action: { 
+                        dismiss()
+                    }) {
                         Image(systemName: "xmark.circle.fill")
                             .resizable()
                             .frame(width: 30, height: 30)
-                            .foregroundColor(.orange)
-                            .padding(.vertical, 30)
-                            .padding(.leading, 8)
+                            .foregroundColor(.brown)
+                            .padding([.trailing,.vertical], 8)
                     }
-                    ,alignment: .topLeading
+                    ,alignment: .topTrailing
                 )
+            if let sourceURLString = recipe.sourceUrl,
+               let url = URL(string: sourceURLString) {
+                HStack {
+                    Spacer()
+                    Link("Give this recipe a try", destination: url)
+                        .font(.system(.body, design: .serif))
+                        .fontWeight(.regular)
+                        .foregroundColor(.green)
+                        .padding(10)
+                        .background(Capsule()
+                        .fill(Color.brown.opacity(0.5)))
+                    Spacer()
+                }
+            }
 
             Text(recipe.cuisine + " " + "cuisine")
                 .font(.system(.body, design: .serif))
                 .fontWeight(.medium)
                 .padding([.horizontal, .top], 20)
-            
-            if let sourceURLString = recipe.sourceUrl,
-               let url = URL(string: sourceURLString) {
-                Link("Give this recipe a try", destination: url)
-                    .environment(\.openURL, OpenURLAction { url in
-                        return .handled
-                    })
-                    .font(.system(.body, design: .serif))
-                    .fontWeight(.regular)
-                    .foregroundColor(.green)
-                    .background(.orange)
-                    .padding(.horizontal, 20)
-            }
             Spacer()
         }
-        .ignoresSafeArea(.all)
-        .navigationBarBackButtonHidden(true)
     }
 }
 
 #Preview {
-    RecipeView(recipe: Recipe(uuid: "x",
+    RecipeDetailView(recipe: Recipe(uuid: "x",
                               cuisine: "Brooklyn",
                               name: "White Chocolate Crème Brûlée",
                               photoUrlLarge: " https://d3jbb8n5wk0qxi.cloudfront.net/photos/dac510db-fa7f-4bf1-af61-706a9c960455/large.jpg",

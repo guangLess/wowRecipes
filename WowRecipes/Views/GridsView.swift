@@ -11,32 +11,36 @@ struct GridsView: View {
     let recipes: [Recipe]
     let filter: RecipeFilter
 
-    @State private var selectedRecipe: Recipe?
     @State private var isRecipeViewPresented: Bool = false
+    @State private var selectedRecipe: Recipe?
 
-        let columns = [
-            GridItem(.flexible(minimum: 10, maximum: 500), spacing: 4),
-            GridItem(.flexible(minimum: 10, maximum: 500), spacing: 4)
-        ]
+    let columns = [
+        GridItem(.flexible(minimum: 10, maximum: 500), spacing: 4),
+        GridItem(.flexible(minimum: 10, maximum: 500), spacing: 4)
+    ]
 
-        var body: some View {
-            NavigationStack {
-                ScrollView {
-                    LazyVGrid(columns: columns, spacing: 4) {
-
-                        ForEach(recipes, id: \.id) { item in
-
-                            NavigationLink(destination: RecipeView(recipe: item)) {
-                                    RecipePreView(imageURL: item.photoUrlSmall,
-                                                  name: item.name,
-                                                  textNeedsToBeFullWidth: false)
-                            }
+    var body: some View {
+        VStack {
+            ScrollView {
+                LazyVGrid(columns: columns, spacing: 4) {
+                    ForEach(recipes, id: \.id) { item in
+                        Button {
+                            self.isRecipeViewPresented = true
+                            self.selectedRecipe = item
+                        } label: {
+                            RecipeImageView(imageURL: item.photoUrlSmall,
+                                          name: item.name,
+                                          textNeedsToBeFullWidth: false)
                         }
                     }
-                    .padding(.horizontal, 4)
                 }
-                .id(filter.rawValue)
+                .padding(.horizontal, 4)
             }
+            .id(filter.rawValue) // for filtering look up id
+            .sheet(item: $selectedRecipe) { recipe in
+                RecipeDetailView(recipe: recipe)
+            }
+        }
     }
 }
 
