@@ -27,7 +27,7 @@ Getting the model and `Networklayer` with error handling was designed to be more
 2) I designed a protocol for EndPoint which is a structure pattern for EndPoints containing host and path, which could be composed into URLComp, then to test and etc.  Did not end up using it as much for mocking tests, etc. Focused on getting the modal presenter to work well.
    
 > Weakest Part of the Project: What do you think is the weakest part of your project?
-
+* commit history was a bit sloppy.
 * Detail view is not built fully yet
 * Not much coverage tests on APIClient.  
 * Did not have time to run the instrument to monitor storage, memory, concurrency, etc
