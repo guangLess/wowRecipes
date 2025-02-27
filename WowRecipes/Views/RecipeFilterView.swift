@@ -13,6 +13,8 @@ enum RecipeFilter: String, CaseIterable {
     case original = "reload"
 }
 
+/// Top filter view that consists of sorted types.
+
 struct FilterView: View {
     @EnvironmentObject private var recipeViewModel: ViewModel
 

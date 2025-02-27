@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+/// reusable view of a recipe image with its title on the bottom
 struct RecipeImageView: View {
     let imageURL: String?
     let name: String

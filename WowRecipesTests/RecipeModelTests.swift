@@ -8,6 +8,7 @@
 import XCTest
 @testable import WowRecipes
 
+// add mal data with more time
 final class RecipeModelTests: XCTestCase {
   
     let pathTxt = "/recipes.json"
@@ -61,7 +62,6 @@ final class RecipeModelTests: XCTestCase {
         let data = json.data(using: .utf8)!
         let networkLayer = NetworkLayer(apiClient: APIClient(recipeEndPoint: endpoint))
         let list = try networkLayer.getRecipes(data: data)
-        print(list)
         XCTAssertTrue(list.isEmpty, "list")
     }
 }

@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+/// Detail view of a recipe item
 struct RecipeDetailView: View {
     let recipe: Recipe
     @Environment(\.dismiss) var dismiss
@@ -26,6 +27,8 @@ struct RecipeDetailView: View {
                     }
                     ,alignment: .topTrailing
                 )
+
+            // Opens to URL
             if let sourceURLString = recipe.sourceUrl,
                let url = URL(string: sourceURLString) {
                 HStack {

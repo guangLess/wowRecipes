@@ -32,6 +32,8 @@
 		50698F3D2D6E4EC900AC2FC9 /* RecipeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50698F3B2D6E4EC900AC2FC9 /* RecipeViewModel.swift */; };
 		50AC95A32D6E87250096F92F /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50AC95A22D6E87250096F92F /* Error.swift */; };
 		50AC95A52D70CD100096F92F /* RecipeFilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50AC95A42D70CD100096F92F /* RecipeFilterView.swift */; };
+		50AC95AA2D70E9470096F92F /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50AC95A22D6E87250096F92F /* Error.swift */; };
+		50AC95AB2D70E9610096F92F /* RecipeFilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50AC95A42D70CD100096F92F /* RecipeFilterView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -336,10 +338,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				50AC95AA2D70E9470096F92F /* Error.swift in Sources */,
 				50698F092D68399A00AC2FC9 /* RecipeModelTests.swift in Sources */,
 				50698F292D68F54300AC2FC9 /* APIEndpoint.swift in Sources */,
 				50698F232D68F29B00AC2FC9 /* RecipeModel.swift in Sources */,
 				50698F2F2D68F6CB00AC2FC9 /* NetworkLayer.swift in Sources */,
+				50AC95AB2D70E9610096F92F /* RecipeFilterView.swift in Sources */,
 				50698F2C2D68F66800AC2FC9 /* ApiClient.swift in Sources */,
 				50698F3D2D6E4EC900AC2FC9 /* RecipeViewModel.swift in Sources */,
 				50698F312D692A3600AC2FC9 /* RecipesDataTest.swift in Sources */,

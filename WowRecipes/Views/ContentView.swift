@@ -13,12 +13,17 @@ struct ContentView: View {
 
     var body: some View {
         VStack {
+            // Top filters
             FilterView()
+            
             Spacer(minLength: 8)
+
+            // Collection view of recipes
             if viewModel.recipes.count > 0 {
                 GridsView(recipes: viewModel.recipes,
                           filter: viewModel.recipeFilter)
             } else {
+                // wildcard view for none loaded view ie, loading, error, etc states
                 Text(transientTxt)
                     .task {
                         await viewModel.loadRecipes()
@@ -28,6 +33,7 @@ struct ContentView: View {
         }
         .environmentObject(viewModel)
         .onChange(of: viewModel.errorMsg) { _, newValue in
+            // response to the error condition changes
             if let newValue, !newValue.isEmpty {
                 transientTxt = newValue
             }

@@ -13,6 +13,7 @@ class ViewModel: ObservableObject {
     @Published var recipeFilter: RecipeFilter = .original
     @Published var errorMsg: String? = nil
 
+    // propagated error that logs to the log system if any, and to pass along to the UI layer
     private var errorCondition: Error? = nil {
         didSet {
             if let errorCondition {
