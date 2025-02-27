@@ -66,7 +66,6 @@ struct FilterView: View {
     }
 }
 
-
 #Preview {
     ContentView()
 }

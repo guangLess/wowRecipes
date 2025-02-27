@@ -8,11 +8,23 @@
 import SwiftUI
 
 struct RecipeView: View {
+    @Environment(\.dismiss) private var dismiss
     let recipe: Recipe
 
     var body: some View {
         VStack(alignment: .leading) {
             RecipePreView(imageURL: recipe.photoUrlLarge, name: recipe.name, textNeedsToBeFullWidth: true)
+                .overlay(
+                    Button(action: { dismiss() }) {
+                        Image(systemName: "xmark.circle.fill")
+                            .resizable()
+                            .frame(width: 30, height: 30)
+                            .foregroundColor(.orange)
+                            .padding(.vertical, 30)
+                            .padding(.leading, 8)
+                    }
+                    ,alignment: .topLeading
+                )
 
             Text(recipe.cuisine + " " + "cuisine")
                 .font(.system(.body, design: .serif))
@@ -34,6 +46,7 @@ struct RecipeView: View {
             Spacer()
         }
         .ignoresSafeArea(.all)
+        .navigationBarBackButtonHidden(true)
     }
 }
 

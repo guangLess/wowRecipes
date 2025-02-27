@@ -11,24 +11,32 @@ struct GridsView: View {
     let recipes: [Recipe]
     let filter: RecipeFilter
 
+    @State private var selectedRecipe: Recipe?
+    @State private var isRecipeViewPresented: Bool = false
+
         let columns = [
             GridItem(.flexible(minimum: 10, maximum: 500), spacing: 4),
             GridItem(.flexible(minimum: 10, maximum: 500), spacing: 4)
         ]
 
         var body: some View {
-            ScrollView {
-                LazyVGrid(columns: columns, spacing: 4) {
-                    
-                    ForEach(recipes, id: \.id) { item in
-                        RecipePreView(imageURL: item.photoUrlSmall,
-                                      name: item.name,
-                                      textNeedsToBeFullWidth: false)
+            NavigationStack {
+                ScrollView {
+                    LazyVGrid(columns: columns, spacing: 4) {
+
+                        ForEach(recipes, id: \.id) { item in
+
+                            NavigationLink(destination: RecipeView(recipe: item)) {
+                                    RecipePreView(imageURL: item.photoUrlSmall,
+                                                  name: item.name,
+                                                  textNeedsToBeFullWidth: false)
+                            }
+                        }
                     }
+                    .padding(.horizontal, 4)
                 }
-                .padding(.horizontal, 4)
+                .id(filter.rawValue)
             }
-            .id(filter.rawValue)
     }
 }
 
