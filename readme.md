@@ -1,5 +1,9 @@
 
-###### Summary: Include screen shots or a video of your app highlighting its features
+> Summary: Include screen shots or a video of your app highlighting its features
+
+<img width="300" alt="EmptyData" src="https://github.com/user-attachments/assets/a3fb631a-f086-4950-862b-1e85aac061a6" />
+<img width="300" alt="AllServerRelatedError" src="https://github.com/user-attachments/assets/76785a6c-0568-49f6-8ace-ace7bb05b9dc" />
+
 
 ----
 > focus Areas: What specific areas of the project did you prioritize? Why did you choose to focus on these areas?
